@@ -1,7 +1,8 @@
 import os
 import unittest
 
-from flaskblog import app, db, mail
+from flask import current_app
+from flaskblog import db, mail
 
 from flaskblog.helpers import register
 
@@ -16,18 +17,18 @@ class BasicTests(unittest.TestCase):
  
 	# executed prior to each test
 	def setUp(self):
-		app.config['TESTING'] = True
-		app.config['WTF_CSRF_ENABLED'] = False
-		app.config['DEBUG'] = False
-		app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
-			os.path.join(app.config['BASEDIR'], TEST_DB)
-		self.app = app.test_client()
+		current_app.config['TESTING'] = True
+		current_app.config['WTF_CSRF_ENABLED'] = False
+		current_app.config['DEBUG'] = False
+		current_app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
+			os.path.join(current_app.config['BASEDIR'], TEST_DB)
+		self.app = current_app.test_client()
 		db.drop_all()
 		db.create_all()
  
 		# Disable sending of emails during unit testing
 		mail.init_app(app)
-		self.assertEqual(app.debug, False)
+		self.assertEqual(current_app.debug, False)
  
 	# executed after each test
 	def tearDown(self):
