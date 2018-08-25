@@ -2,12 +2,10 @@
 	Learning how to use the Flask Python microframework to make a typical blog website
 
 ### testing
-```
-python -m unittest
-python -m unittest -h
-python -m unittest -v testing.py
-python -m doctest -v doctest.py
-```
+	python -m unittest
+	python -m unittest -h
+	python -m unittest -v testing.py
+	python -m doctest -v doctest.py
 
 ### creating a virtual environment to install your plugins
 	python -m venv venv
