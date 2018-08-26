@@ -1,10 +1,11 @@
-from flask import render_template, url_for, flash, redirect, request, Blueprint
+from flask import render_template, url_for, flash, redirect, request, Blueprint, jsonify
 from flask_login import login_user, current_user, logout_user, login_required
 from flaskblog import db, bcrypt
-from flaskblog.models import User, Post
+from flaskblog.models import User, Post, AlchemyEncoder
 from flaskblog.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
                                    RequestResetForm, ResetPasswordForm)
 from flaskblog.users.utils import save_picture, send_reset_email
+import simplejson as json
 
 users = Blueprint('users', __name__)
 
@@ -74,6 +75,9 @@ def user_posts(username):
 	page = request.args.get('page', 1, type=int)
 	# username = request.args.get('username', None, type=str)
 	user = User.query.filter_by(username=username).first_or_404()
+	# return jsonify(user.serialize)
+	# return json.dumps(user, cls=AlchemyEncoder)
+	# return jsonify([i.serialize for i in user.posts])
 	posts = Post.query.filter_by(author=user)\
 		.order_by(Post.date_posted.desc())\
 		.paginate(per_page=5, page=page)
