@@ -1,4 +1,4 @@
-learnt
+process
 -------
 new project:
 
@@ -17,7 +17,7 @@ $ psql
 
 
 --------
-to learn
+to add
 --------
 json api
 jwt sessions
