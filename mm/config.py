@@ -3,9 +3,9 @@ import os
 class Config:
 	SECRET_KEY = os.environ.get('FLASKBLOG_SECRET_KEY')
 	# SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
-	SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/flaskblog'
+	SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/mm'
 	SQLALCHEMY_TRACK_MODIFICATIONS = True
-	BASEDIR = '/Users/techytimo/Projects/flaskblog'
+	BASEDIR = '/Users/techytimo/Projects/MotiMate/MotiMate/backend'
 
 	MAIL_SERVER = 'smtp.googlemail.com'
 	MAIL_PORT = 587

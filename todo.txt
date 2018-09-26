@@ -1,0 +1,24 @@
+learnt
+-------
+new project:
+
+copy project
+change from "mm" string
+
+$ psql
+ (make sure postgress.app is in your export path - myzsh)
+ :/Applications/Postgres.app/Contents/Versions/latest/bin
+
+# create database newapp;
+# \q
+
+
+
+
+
+--------
+to learn
+--------
+json api
+jwt sessions
+unit tests
