@@ -1,6 +1,4 @@
-from mm import create_app
-
-app = create_app()
+from mm import app
 
 if __name__ == '__main__':
 	app.run(port=7777, debug=True)
