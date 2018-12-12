@@ -1,7 +1,8 @@
 process
 -------
 step 1
-search and replace the "flaskblog" string with "your-app-name"
+rename "flaskblog" folder to "your-app"
+search and replace the "flaskblog" string with "your-app"
 
 step 2
 python3.6 -m venv env

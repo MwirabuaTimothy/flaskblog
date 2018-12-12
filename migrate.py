@@ -6,7 +6,7 @@ db.create_all()
 migrate = Migrate(app, db)
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)
-# from Models import Roles, Users, RevokedTokens
+# from flaskblog import users, posts
 
 if __name__ == '__main__':
     manager.run()
