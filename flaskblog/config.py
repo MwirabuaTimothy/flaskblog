@@ -2,8 +2,8 @@ import os
 
 class Config:
 	SECRET_KEY = os.environ.get('FLASKBLOG_SECRET_KEY')
-	SQLALCHEMY_DATABASE_URI = 'sqlite:///mm.db'
-	# SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/mm'
+	SQLALCHEMY_DATABASE_URI = 'sqlite:///flaskblog.db'
+	# SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/flaskblog'
 	SQLALCHEMY_TRACK_MODIFICATIONS = True
 	BASEDIR = '/'
 

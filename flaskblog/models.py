@@ -1,7 +1,7 @@
 from datetime import datetime
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask import current_app, jsonify
-from mm import db, login_manager
+from flaskblog import db, login_manager
 from flask_login import UserMixin
 from sqlalchemy.ext.declarative import DeclarativeMeta
 import simplejson as json

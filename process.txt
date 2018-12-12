@@ -1,7 +1,7 @@
 process
 -------
 step 1
-search and replace the "mm" string with "your-app-name"
+search and replace the "flaskblog" string with "your-app-name"
 
 step 2
 python3.6 -m venv env

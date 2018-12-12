@@ -1,5 +1,5 @@
 import unittest
-from mm import helpers
+from flaskblog import helpers
 def test_valid_user_registration(self):
     response = self.register('tim', 'tim@gmail.com', 'test', 'test')
     self.assertEqual(response.status_code, 200)

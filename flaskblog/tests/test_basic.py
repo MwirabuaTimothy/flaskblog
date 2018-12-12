@@ -2,9 +2,9 @@ import os
 import unittest
 
 from flask import current_app
-from mm import db, mail
+from flaskblog import db, mail
 
-from mm.helpers import register
+from flaskblog.helpers import register
 
 TEST_DB = 'test.db'
  
