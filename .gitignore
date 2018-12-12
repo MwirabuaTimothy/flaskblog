@@ -89,7 +89,6 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-motimate/
 
 # Spyder project settings
 .spyderproject
@@ -109,3 +108,5 @@ motimate/
 
 # others
 /uploads
+/migrations
+

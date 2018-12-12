@@ -1,0 +1,33 @@
+process
+-------
+step 1
+search and replace the "mm" string with "your-app-name"
+
+step 2
+python3.6 -m venv env
+
+step 3
+source env/bin/activate
+
+step 4
+pip install -r requirements.txt
+
+step 5 after you have written your migrations
+python migrate.py db init
+
+step 6
+python migrate.py db migrate
+
+step 7
+python migrate.py db upgrade
+
+NB
+Any new migration you create you have to remember to do step 5 and 6 and 7
+
+
+step 8
+python run.py
+
+step 9
+every time you install a module
+  pip freeze > requirements.txt  

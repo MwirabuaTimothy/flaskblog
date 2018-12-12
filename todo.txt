@@ -1,22 +1,3 @@
-process
--------
-new project:
-
-copy project
-change from "mm" string
-
-$ psql
- (make sure postgress.app is in your export path - myzsh)
- :/Applications/Postgres.app/Contents/Versions/latest/bin
-
-# create database newapp;
-# \q
-
-
-
-
-
---------
 to add
 --------
 json api

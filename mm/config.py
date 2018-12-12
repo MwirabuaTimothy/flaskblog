@@ -2,10 +2,10 @@ import os
 
 class Config:
 	SECRET_KEY = os.environ.get('FLASKBLOG_SECRET_KEY')
-	SQLALCHEMY_DATABASE_URI = 'sqlite:///motimate.db'
+	SQLALCHEMY_DATABASE_URI = 'sqlite:///mm.db'
 	# SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/mm'
 	SQLALCHEMY_TRACK_MODIFICATIONS = True
-	BASEDIR = '/Users/techytimo/Projects/MotiMate/MotiMate/backend'
+	BASEDIR = '/'
 
 	MAIL_SERVER = 'smtp.googlemail.com'
 	MAIL_PORT = 587
